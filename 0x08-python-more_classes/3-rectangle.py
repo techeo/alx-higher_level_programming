@@ -6,9 +6,7 @@ Python project 0x08 task 3.
 
 class Rectangle:
     """
-    Represents a rectangle with width and height attributes. Provides methods
-    for calculating area and perimeter, and a string representation of the
-    rectangle.
+    Represents a rectangle with width and height attributes.
 
     Args:
         width (int): Horizontal dimension of the rectangle, defaults to 0.
