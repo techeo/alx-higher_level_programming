@@ -26,6 +26,7 @@ class Rectangle:
         Returns:
             int: Horizontal dimension of the rectangle.
         """
+
         return self.__width
 
     @width.setter
@@ -40,6 +41,7 @@ class Rectangle:
             TypeError: If `value` is not an integer.
             ValueError: If `value` is less than 0.
         """
+
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
@@ -54,6 +56,7 @@ class Rectangle:
         Returns:
             int: Vertical dimension of the rectangle.
         """
+
         return self.__height
 
     @height.setter
@@ -68,6 +71,7 @@ class Rectangle:
             TypeError: If `value` is not an integer.
             ValueError: If `value` is less than 0.
         """
+
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value < 0:
@@ -81,6 +85,7 @@ class Rectangle:
         Returns:
             int: Area of the rectangle, given by width * height.
         """
+
         return self.__width * self.__height
 
     def perimeter(self):
@@ -90,6 +95,7 @@ class Rectangle:
         Returns:
             int: Perimeter of the rectangle, or 0 if either dimension is 0.
         """
+
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
@@ -102,6 +108,7 @@ class Rectangle:
         Returns:
             str: String suitable for printing the rectangle (final newline omitted).
         """
+
         rectangle_str = ""
         for row in range(self.__height):
             for col in range(self.__width):
@@ -117,5 +124,6 @@ class Rectangle:
         Returns:
             str: Output of _draw_rectangle, creating a string suitable for printing.
         """
+
         return self._draw_rectangle()
 
