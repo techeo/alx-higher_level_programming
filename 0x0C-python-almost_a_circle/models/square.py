@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the Square class which is a subclass of Rectangle.
-
-The Square class inherits from the Rectangle class and defines a Square object."""
+"""This is the Square module."""
 from models.rectangle import Rectangle
 
 
@@ -9,18 +7,18 @@ class Square(Rectangle):
     """This class inherits from Rectangle and defines a Square object."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initializes the Square object.
+        """Initializes the default attributes of the Base object.
 
         Args:
             size (int): the size of a square side.
-            x (int): the horizontal padding of the square.
-            y (int): the vertical padding of the square.
-            id (int): the identifier of the Square object.
+            x (int): the wanted horizontal (x) padding of the square.
+            y (int): the wanted vertical (y) padding of the square.
+            id (int): the wanted identifier of the Base object.
         """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Returns a string representation of the Square object."""
+        """Overrides the default behaviour of the __str__ method."""
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
 
@@ -61,4 +59,3 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns the dictionary representation of a Square"""
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
-
